@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What The Forecast?!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <h1 class="app-title">Umbrella or Glasses ☂️👓 ?</h1>
+
+    <!-- Search -->
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="Enter country..." />
+      <button onclick="getWeather()">Search</button>
+    </div>
+
+    <!-- Error -->
+    <p id="error" class="hidden error"></p>
+
+    <!-- Loading Spinner -->
+    <div id="spinner" class="spinner hidden"></div>
+
+    <!-- Current Weather -->
+    <div id="weatherCard" class="card hidden">
+      <h2 id="cityName"></h2>
+      <img id="weatherIcon" alt="Weather Icon" />
+      <p id="temp"></p>
+      <p id="desc"></p>
+      <p>💧 Humidity: <span id="humidity"></span></p>
+      <p>🌬️ Wind: <span id="wind"></span></p>
+    </div>
+
+    <!-- Forecast -->
+    <section id="forecastSection" class="hidden">
+      <h2>5-Day Forecast</h2>
+      <div id="forecastContainer" class="forecast-grid"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
